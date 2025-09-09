@@ -13,7 +13,9 @@ export function Usetoast() {
     toast: ({ title = "แจ้งเตือน", description, actionLabel, onAction }: ToastParams) =>
       sonner(title, {
         description,
-        action: actionLabel && onAction ? { label: actionLabel, onClick: onAction } : undefined,
+        action: actionLabel && onAction ? 
+        { label: actionLabel, 
+        onClick: onAction } : undefined,
       }),
   }
 }
