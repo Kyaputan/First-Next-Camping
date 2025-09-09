@@ -1,9 +1,9 @@
-const page = () => {
+const CampPage = () => {
   return (
     <div>
-        <p>Camp</p>
+        <p>CampPage</p>
     </div>
   )
 }
 
-export default page
+export default CampPage
