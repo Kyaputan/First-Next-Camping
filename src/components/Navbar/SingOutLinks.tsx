@@ -3,10 +3,12 @@
 import { useClerk } from "@clerk/nextjs"
 import { Button } from "@/components/ui/button"
 import { Usetoast } from "./Usetoast"
+import { useRouter } from "next/navigation"
 
 const SignOutLinks = () => {
     const { signOut } = useClerk()
     const { toast } = Usetoast()
+    const router = useRouter()
 
     return (
         <Button
@@ -15,8 +17,9 @@ const SignOutLinks = () => {
                 signOut(() => {
                     toast({
                         title: "Signed out",
-                        description: "คุณได้ออกจากระบบเรียบร้อยแล้วค่ะ",
+                        description: "Logout successfully",
                     })
+                    router.push("/")
                 })
             }
         >
