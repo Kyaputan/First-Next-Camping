@@ -13,7 +13,7 @@ import Link from "next/link";
 import { Navlinks } from "@/utils/links";
 import SingOutLinks from "./SingOutLinks";
 import { SignedIn, SignedOut } from "@clerk/nextjs"
-import { SignInButton, SignOutButton } from "@clerk/nextjs"
+import { SignInButton, SignOutButton, SignUpButton } from "@clerk/nextjs"
 
 const DropDownListMenu = () => {
     return (
@@ -30,6 +30,9 @@ const DropDownListMenu = () => {
                 {/* SignedOut */}
                 <SignedOut>
                     <DropdownMenuItem>
+                        <SignUpButton />
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
                         <SignInButton />
                     </DropdownMenuItem>
                 </SignedOut>
@@ -41,7 +44,7 @@ const DropDownListMenu = () => {
                     </DropdownMenuItem>
                 ))}
 
-                
+
                 {/* SignedIn */}
                 <SignedIn>
                     <DropdownMenuSeparator />
