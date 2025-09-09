@@ -30,25 +30,26 @@ const DropDownListMenu = () => {
                 {/* SignedOut */}
                 <SignedOut>
                     <DropdownMenuItem>
-                        <SignUpButton />
+                        <SignUpButton mode="modal"/>
                     </DropdownMenuItem>
                     <DropdownMenuItem>
-                        <SignInButton />
+                        <SignInButton mode="modal"/>
                     </DropdownMenuItem>
                 </SignedOut>
-
-                <DropdownMenuSeparator />
-                {Navlinks.map((link, index) => (
-                    <DropdownMenuItem key={index}>
-                        <Link href={link.href}>{link.label}</Link>
-                    </DropdownMenuItem>
-                ))}
 
 
                 {/* SignedIn */}
                 <SignedIn>
                     <DropdownMenuSeparator />
-                    <SingOutLinks />
+                    {Navlinks.map((link, index) => (
+                        <DropdownMenuItem key={index}>
+                            <Link href={link.href}>{link.label}</Link>
+                        </DropdownMenuItem>
+                    ))}
+                    <DropdownMenuSeparator />
+                    <DropdownMenuItem>
+                        <SingOutLinks />
+                    </DropdownMenuItem>
                 </SignedIn>
             </DropdownMenuContent>
 

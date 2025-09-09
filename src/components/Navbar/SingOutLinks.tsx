@@ -11,8 +11,7 @@ const SignOutLinks = () => {
     const router = useRouter()
 
     return (
-        <Button
-            variant="outline"
+        <button
             onClick={() =>
                 signOut(() => {
                     toast({
@@ -24,7 +23,7 @@ const SignOutLinks = () => {
             }
         >
             Sign Out
-        </Button>
+        </button>
     )
 }
 
