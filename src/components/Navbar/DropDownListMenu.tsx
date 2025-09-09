@@ -11,7 +11,7 @@ import { Button } from "../ui/button";
 import UserIcon from "./UserIcon";
 import Link from "next/link";
 import { Navlinks } from "@/utils/links";
-
+import SingOutLinks from "./SingOutLinks";
 
 const DropDownListMenu = () => {
     return (
@@ -30,7 +30,9 @@ const DropDownListMenu = () => {
                         <Link href={link.href}>{link.label}</Link>
                     </DropdownMenuItem>
                 ))}
+                <SingOutLinks />
             </DropdownMenuContent>
+            
         </DropdownMenu>
     );
 };
