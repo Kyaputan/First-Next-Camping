@@ -13,7 +13,7 @@ const CreateProfilePage = () => {
     return (
         <section>
             <h1 className="text-2xl font-semibold mb-8 capitalize">New User</h1>
-            <div>
+            <div className="border border-gray-200 p-6 rounded-md max-w-lg shadow-sm">
                 <form action={CreateProfileAction}>
                     <div className="mb-2">
                         <Label htmlFor="firstName">First Name</Label>
