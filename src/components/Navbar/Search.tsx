@@ -1,6 +1,11 @@
+import { Input } from "../ui/input"
+
 const Search = () => {
   return (
-    <div>Search</div>
+    <Input placeholder="Search Camping..." 
+    type="text"
+    className="w-full max-w-xs"
+    />
   )
 }
 
