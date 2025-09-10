@@ -1,9 +1,9 @@
-const page = () => {
+const FavoritsPage = () => {
   return (
     <div>
-        <p>Favorite</p>
+        <p>FavoritsPage</p>
     </div>
   )
 }
 
-export default page
+export default FavoritsPage
