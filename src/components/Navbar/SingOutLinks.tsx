@@ -1,7 +1,6 @@
 "use client"
 
 import { useClerk } from "@clerk/nextjs"
-import { Button } from "@/components/ui/button"
 import { Usetoast } from "./Usetoast"
 import { useRouter } from "next/navigation"
 
