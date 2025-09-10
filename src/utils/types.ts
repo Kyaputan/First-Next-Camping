@@ -1,3 +1,5 @@
+import type { LucideIcon } from "lucide-react";
+
 export type actionFunction = (
     prevState: any,
     formData: FormData
@@ -32,3 +34,8 @@ export type SubmitButtonsProps = {
     label: string
     size?: btnSize
 }
+
+export type Category = {
+    label: string;
+    icon: LucideIcon;
+  };

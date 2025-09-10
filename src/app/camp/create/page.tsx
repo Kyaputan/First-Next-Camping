@@ -5,6 +5,7 @@ import FormContainer from "@/components/Form/Formcontainer";
 import { CreateLandmarkAction } from "@/actions/actions";
 import { currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
+import CategoryInput from "@/components/Form/CategoryInput";
 
 const CreateLandmarkPage = async () => {
 
@@ -17,8 +18,9 @@ const CreateLandmarkPage = async () => {
                     <div className="grid md:grid-cols-2 gap-4 mt-4">
                         <FormInPut name="name"
                         type="text"
-                        label="Landaark"
+                        label="Landark"
                         placeholder="Enter your Landmark" />
+                        <CategoryInput />
                     </div>
                     <SubmitButtons label="Create Landmark" size={{size: "lg"}}/>
 
