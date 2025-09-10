@@ -12,7 +12,7 @@ const SubmitButtons = (props: SubmitButtonsProps) => {
             type="submit"
             size={size?.size}
             disabled={pending}
-            className="Capitalize">
+            className="Capitalize mt-4">
             {pending ? (
                 <div className="flex items-center">
                     <RefreshCw className="mr-2 h-4 w-4 animate-spin" />

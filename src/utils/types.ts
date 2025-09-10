@@ -39,3 +39,9 @@ export type Category = {
     label: string;
     icon: LucideIcon;
   };
+
+
+export type Provinces = {
+    PROVINCE_ID: number;
+    PROVINCE_NAME: string;
+}

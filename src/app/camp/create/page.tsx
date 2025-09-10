@@ -1,11 +1,14 @@
 
-import FormInPut from "@/components/Form/FormInPut";    
+import FormInPut from "@/components/Form/FormInPut";
 import SubmitButtons from "@/components/Form/Buttons";
 import FormContainer from "@/components/Form/Formcontainer";
 import { CreateLandmarkAction } from "@/actions/actions";
 import { currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 import CategoryInput from "@/components/Form/CategoryInput";
+import TextAreaInput from "@/components/Form/TextAreaInput";
+import ProvincesInput from "@/components/Form/ProvincesInput";
+import { ProvinvesCombobox } from "@/components/Form/ProvinvesCombobox";
 
 const CreateLandmarkPage = async () => {
 
@@ -17,12 +20,22 @@ const CreateLandmarkPage = async () => {
 
                     <div className="grid md:grid-cols-2 gap-4 mt-4">
                         <FormInPut name="name"
-                        type="text"
-                        label="Landark"
-                        placeholder="Enter your Landmark" />
+                            type="text"
+                            label="Landark"
+                            placeholder="Enter your Landmark" />
                         <CategoryInput />
                     </div>
-                    <SubmitButtons label="Create Landmark" size={{size: "lg"}}/>
+
+                    <TextAreaInput name="description" />
+                    <div className="grid md:grid-cols-2 gap-4 mt-4">
+                        <FormInPut name="price"
+                            type="number"
+                            label="price"
+                            placeholder="price" />
+                        {/* <ProvincesInput /> ของเก่า */}
+                        <ProvinvesCombobox />
+                    </div>
+                    <SubmitButtons label="Create Landmark" size={{ size: "lg" }} />
 
                 </FormContainer>
             </div>
