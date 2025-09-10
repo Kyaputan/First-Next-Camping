@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
-import FormInPut from "@/components/Form/FormInPut";
+import FormInPut from "@/components/Form/FormInPut";    
+import SubmitButtons from "@/components/Form/Buttons";
 
 const CreateProfileAction = async (formData: FormData) => {
     'use server'
@@ -34,9 +34,7 @@ const CreateProfilePage = () => {
                             label="User Name"
                             placeholder="Enter your user name" />
                     </div>
-                    <Button type="submit" size="lg">
-                        Create
-                    </Button>
+                    <SubmitButtons label="Create" size={{size: "lg"}}/>
                 </form>
             </div>
         </section>
