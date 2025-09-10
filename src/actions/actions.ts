@@ -1,7 +1,10 @@
 'use server'
-import { z } from "zod"
 import { ProfileSchema } from "@/utils/Schemas"
 import { validataWithZod } from "@/utils/Schemas"
+import { renderError , ErrorFields } from "@/utils/Error"
+
+
+
 
 export const CreateProfileAction = async (prevState: any,formData: FormData) => {
     try {
@@ -11,6 +14,6 @@ export const CreateProfileAction = async (prevState: any,formData: FormData) => 
         console.log(user)
         return {message: "User created successfully"}
     } catch (error) {
-        return {message: error.message || "Something went wrong"}
+        return renderError(error as ErrorFields)
     }
 }
