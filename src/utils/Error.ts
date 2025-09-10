@@ -1,4 +1,4 @@
-type ErrorFields = {
+export type ErrorFields = {
     error: unknown
     message: string
 }
