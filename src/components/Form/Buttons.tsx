@@ -4,7 +4,6 @@ import { Button } from "../ui/button";
 import { CloudUpload , RefreshCw } from 'lucide-react';
 import { SubmitButtonsProps } from "@/utils/types";
 
-
 const SubmitButtons = (props: SubmitButtonsProps) => {
     const { label, size } = props
     const { pending } = useFormStatus()
