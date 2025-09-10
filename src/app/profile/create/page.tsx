@@ -3,8 +3,12 @@ import FormInPut from "@/components/Form/FormInPut";
 import SubmitButtons from "@/components/Form/Buttons";
 import FormContainer from "@/components/Form/Formcontainer";
 import { CreateProfileAction } from "@/actions/actions";
+import { currentUser } from "@clerk/nextjs/server";
+import { redirect } from "next/navigation";
 
-const CreateProfilePage = () => {
+const CreateProfilePage = async () => {
+    const user = await currentUser()
+    if (user?.privateMetadata.hasProfile) redirect("/")
     return (
         <section>
             <h1 className="text-2xl font-semibold mb-8 capitalize">New User</h1>
