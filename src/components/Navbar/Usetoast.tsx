@@ -1,12 +1,6 @@
 "use client"
 import { toast as sonner } from "sonner"
-
-type ToastParams = {
-  title?: string
-  description?: string
-  actionLabel?: string
-  onAction?: () => void
-}
+import { ToastParams } from "@/utils/types"
 
 export function Usetoast() {
   return {

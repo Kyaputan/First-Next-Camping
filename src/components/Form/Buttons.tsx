@@ -2,15 +2,8 @@
 import { useFormStatus } from "react-dom";
 import { Button } from "../ui/button";
 import { CloudUpload , RefreshCw } from 'lucide-react';
-type btnSize = {
-    size: 'default' | 'lg' | 'sm' | 'icon'
-}
+import { SubmitButtonsProps } from "@/utils/types";
 
-
-type SubmitButtonsProps = {
-    label: string
-    size?: btnSize
-}
 
 const SubmitButtons = (props: SubmitButtonsProps) => {
     const { label, size } = props

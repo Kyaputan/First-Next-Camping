@@ -1,13 +1,7 @@
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { FormInPutProps } from "@/utils/types";
 
-type FormInPutProps = {
-    name: string
-    type: string | 'text'
-    label?: string
-    defaultValue?: string
-    placeholder?: string
-}
 
 
 const FormInPut = (props:FormInPutProps) => {
