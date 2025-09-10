@@ -2,20 +2,7 @@
 import FormInPut from "@/components/Form/FormInPut";    
 import SubmitButtons from "@/components/Form/Buttons";
 import FormContainer from "@/components/Form/Formcontainer";
-import { actionFunction } from "@/utils/types";
-
-const CreateProfileAction = async (prevState: any,formData: FormData) => {
-    'use server'
-    const firstName = formData.get('FirstName') as string
-    const lastName = formData.get('LastName') as string
-    const userName = formData.get('UserName') as string
-    const fullName = `${firstName} ${lastName}`
-    console.log('fullName', fullName)
-    console.log('userName', userName)
-    const msg = {'fullName': fullName, 'userName': userName}
-    return {message: "User created successfully" , msg}
-}
-
+import { CreateProfileAction } from "@/actions/actions";
 
 const CreateProfilePage = () => {
     return (
