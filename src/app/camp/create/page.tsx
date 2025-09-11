@@ -9,6 +9,8 @@ import CategoryInput from "@/components/Form/CategoryInput";
 import TextAreaInput from "@/components/Form/TextAreaInput";
 import ProvincesInput from "@/components/Form/ProvincesInput";
 import { ProvinvesCombobox } from "@/components/Form/ProvinvesCombobox";
+import MapLandmark from "@/components/map/mapLandmark";
+
 
 const CreateLandmarkPage = async () => {
 
@@ -35,6 +37,9 @@ const CreateLandmarkPage = async () => {
                         {/* <ProvincesInput /> ของเก่า */}
                         <ProvinvesCombobox />
                     </div>
+
+
+                     <MapLandmark /> {/*location={{lat:14,lng:100}} */}
                     <SubmitButtons label="Create Landmark" size={{ size: "lg" }} />
 
                 </FormContainer>
