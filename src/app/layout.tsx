@@ -21,21 +21,21 @@ export const metadata: Metadata = {
   description: "Camping Web App by Rachata",
 };
 
-export default function RootLayout({children,}: Readonly<{children: React.ReactNode;}>) {
+export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <ClerkProvider>
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Providers>
+      <html lang="en" suppressHydrationWarning>
+        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+          <Providers>
 
-          <Navbar />
-          <main className="container">  
-          {children}
-          </main>
-          <Toaster />
-        </Providers>
-      </body>
-    </html>
+            <Navbar />
+            <main className="container">
+              {children}
+            </main>
+            <Toaster />
+          </Providers>
+        </body>
+      </html>
     </ClerkProvider>
   );
 }
